@@ -7,6 +7,7 @@ import java.util.List;
 import io.objectbox.Box;
 import io.objectbox.BoxStore;
 
+
 public class ObjectBox {
     private static BoxStore boxStore;
 
@@ -14,18 +15,24 @@ public class ObjectBox {
         boxStore = MyObjectBox.builder()
                 .androidContext(context.getApplicationContext())
                 .build();
+
+
     }
+    Box<Trainer> TrainerBox =ObjectBox.get().boxFor(Trainer.class);
 
     public static BoxStore get() { return boxStore; }
 
     public List<Trainer> getTrainers(){
-        Box<Trainer> TrainerBox =ObjectBox.get().boxFor(Trainer.class);
         return TrainerBox.getAll();
     }
 
     public Trainer getTrainer(int id){
-        Box<Trainer> TrainerBox =ObjectBox.get().boxFor(Trainer.class);
         return TrainerBox.get(id);
     }
+
+    public void  putTrainer(Trainer t){
+        TrainerBox.put(t);
+    }
+
 
 }
