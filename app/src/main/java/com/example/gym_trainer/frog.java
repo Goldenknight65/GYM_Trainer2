@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.Locale;
-public class workout extends AppCompatActivity {
+public class frog extends AppCompatActivity {
 
     private static final long START_TIME_IN_MILLIS = 20000;
 
@@ -25,7 +25,7 @@ public class workout extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_workout);
+        setContentView(R.layout.activity_frog);
 
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
