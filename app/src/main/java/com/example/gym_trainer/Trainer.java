@@ -8,7 +8,7 @@ import io.objectbox.annotation.Id;
 @Entity
 class Trainer{
     @Id
-    private int id =0;
+    public long id;
     private double waight;
     private double hight;
     private double age;
@@ -16,7 +16,7 @@ class Trainer{
     private double c;
     private int steps;
 
-    public Trainer(int id, double waight, double hight, double age, char gender, double c, int steps) {
+    public Trainer(long id, double waight, double hight, double age, char gender, double c, int steps) {
         this.id = id;
         this.waight = waight;
         this.hight = hight;
@@ -43,7 +43,7 @@ class Trainer{
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
