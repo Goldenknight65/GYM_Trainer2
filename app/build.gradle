@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.gym_trainer"
-        minSdk 21
+        minSdk 29
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -27,6 +27,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    buildToolsVersion '32.0.0'
 }
 
 dependencies {

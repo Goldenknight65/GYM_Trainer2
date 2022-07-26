@@ -2,13 +2,11 @@ package com.example.gym_trainer;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
-import io.objectbox.relation.ToMany;
 
 @Entity
 public class Day{
 @Id long id;
     int day;
-   public ToMany<Exercise> exercise;
 
     public Day(long id, int day) {
         this.id = id;

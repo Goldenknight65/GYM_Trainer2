@@ -1,8 +1,6 @@
 package com.example.gym_trainer;
 
 import android.content.Context;
-import android.telecom.PhoneAccount;
-
 import java.util.List;
 import java.util.stream.DoubleStream;
 
@@ -12,7 +10,8 @@ import io.objectbox.BoxStore;
 
 public class ObjectBox {
 
-    private static BoxStore boxStore;
+    public static BoxStore boxStore;
+
     public static void init(Context context) {
         boxStore = MyObjectBox.builder()
                 .androidContext(context.getApplicationContext())

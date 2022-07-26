@@ -46,9 +46,62 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "2:413535608422447730",
+      "lastPropertyId": "2:1163900292670829750",
+      "name": "Day",
+      "properties": [
+        {
+          "id": "1:4359905510169391219",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1163900292670829750",
+          "name": "day",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5049297976075987506",
+      "lastPropertyId": "5:1709739513241596215",
+      "name": "Exercise",
+      "properties": [
+        {
+          "id": "1:6879791084672777912",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:574459717150475843",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:9210955063327723259",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "4:4841155486480307798",
+          "name": "flag",
+          "type": 5
+        },
+        {
+          "id": "5:1709739513241596215",
+          "name": "col",
+          "type": 5
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "1:7110530633558801009",
+  "lastEntityId": "3:5049297976075987506",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

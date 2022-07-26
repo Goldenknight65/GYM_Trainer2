@@ -1,40 +1,31 @@
 package com.example.gym_trainer;
 
-
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
-import io.objectbox.relation.ToMany;
 
 @Entity
 public class Exercise {
    @Id
    public long id;
-   private int ColperMint;
-    private  String type;
-    private String name;
-    private boolean Flag;
-    public ToMany<Day> day;
-    public Exercise(int colperMint, String type, String name, boolean flage) {
-        ColperMint = colperMint;
-        this.type = type;
+   private String name;
+   private String type;
+   private int flag;
+   private int col;
+
+    public Exercise(long id, String name, String type, int flag, int col) {
+        this.id = id;
         this.name = name;
-        Flag = flage;
-    }
-
-    public int getColperMint() {
-        return ColperMint;
-    }
-
-    public void setColperMint(int colperMint) {
-        ColperMint = colperMint;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
         this.type = type;
+        this.flag = flag;
+        this.col = col;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -45,12 +36,27 @@ public class Exercise {
         this.name = name;
     }
 
-    public boolean isFlag() {
-        return Flag;
+    public String getType() {
+        return type;
     }
 
-    public void setFlag(boolean flag) {
-        Flag = flag;
+    public void setType(String type) {
+        this.type = type;
     }
 
+    public int getFlag() {
+        return flag;
+    }
+
+    public void setFlag(int flag) {
+        this.flag = flag;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = col;
+    }
 }
