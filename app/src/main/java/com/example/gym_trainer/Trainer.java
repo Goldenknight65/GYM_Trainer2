@@ -1,37 +1,31 @@
 package com.example.gym_trainer;
 
-import io.objectbox.annotation.Entity;
-import io.objectbox.annotation.Id;
 
 
 
-@Entity
 class Trainer{
-    @Id
-    public long id;
     private double waight;
     private double hight;
     private double age;
     private char gender;
     private double c;
-    private int steps;
+    private int Flag;
 
-    public Trainer(long id, double waight, double hight, double age, char gender, double c, int steps) {
-        this.id = id;
+    public Trainer(double waight, double hight, double age, char gender, double c, int Flag) {
         this.waight = waight;
         this.hight = hight;
         this.age = age;
         this.gender = gender;
         this.c = c;
-        this.steps = steps;
+        this.Flag = Flag;
     }
 
     public int getSteps() {
-        return steps;
+        return Flag;
     }
 
-    public void setSteps(int steps) {
-        this.steps = steps;
+    public void setFlag(int Flag) {
+        this.Flag = Flag;
     }
 
     public double getC() {
@@ -40,15 +34,6 @@ class Trainer{
 
     public void setC(double c) {
         this.c = c;
-    }
-
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setWaight(double waight) {
@@ -86,13 +71,12 @@ class Trainer{
     @Override
     public String toString() {
         return "Trainer{" +
-                "id=" + id +
                 ", waight=" + waight +
                 ", hight=" + hight +
                 ", age=" + age +
                 ", gender=" + gender +
                 ", c=" + c +
-                ", steps=" + steps +
+                ", steps=" + Flag +
                 '}';
     }
 }

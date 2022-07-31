@@ -1,23 +1,26 @@
 package com.example.gym_trainer;
 
-import io.objectbox.annotation.Entity;
-import io.objectbox.annotation.Id;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 @Entity
 public class Day{
-@Id long id;
-    int day;
 
-    public Day(long id, int day) {
+    @PrimaryKey int id;
+    int day;
+    Exercise [] exercise;
+
+    public Day(int id, int day, Exercise[] exercise) {
         this.id = id;
         this.day = day;
+        this.exercise = exercise;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -27,5 +30,13 @@ public class Day{
 
     public void setDay(int day) {
         this.day = day;
+    }
+
+    public Exercise[] getExercise() {
+        return exercise;
+    }
+
+    public void setExercise(Exercise[] exercise) {
+        this.exercise = exercise;
     }
 }

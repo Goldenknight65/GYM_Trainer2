@@ -1,18 +1,15 @@
 package com.example.gym_trainer;
 
-import io.objectbox.annotation.Entity;
-import io.objectbox.annotation.Id;
 
-@Entity
 public class Exercise {
-   @Id
-   public long id;
+
+  public int id;
    private String name;
    private String type;
    private int flag;
    private int col;
 
-    public Exercise(long id, String name, String type, int flag, int col) {
+    public Exercise(int id, String name, String type, int flag, int col) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -24,7 +21,7 @@ public class Exercise {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
