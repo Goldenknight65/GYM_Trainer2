@@ -2,26 +2,34 @@ package com.example.gym_trainer;
 
 
 import androidx.room.Entity;
+import androidx.room.Junction;
 import androidx.room.PrimaryKey;
+import androidx.room.Relation;
+
+import java.util.List;
+
 @Entity
 public class Day{
 
-    @PrimaryKey int id;
+    @PrimaryKey int dayId;
     int day;
-    Exercise [] exercise;
-
-    public Day(int id, int day, Exercise[] exercise) {
-        this.id = id;
+    @Relation(parentColumn = "Exid",
+            entity = Exercise.class,
+            associateBy =@Junction(value = TrainSchedule.class,
+            parentColumn = "dayId",
+            entityColumn = "Exid"), entityColumn = "exerciseList")
+     List<Exercise> exerciseList;
+    public Day(int dayId, int day ) {
+        this.dayId = dayId;
         this.day = day;
-        this.exercise = exercise;
     }
 
     public int getId() {
-        return id;
+        return dayId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.dayId = id;
     }
 
     public int getDay() {
@@ -32,11 +40,11 @@ public class Day{
         this.day = day;
     }
 
-    public Exercise[] getExercise() {
-        return exercise;
-    }
-
-    public void setExercise(Exercise[] exercise) {
-        this.exercise = exercise;
+    @Override
+    public String toString() {
+        return "Day{" +
+                "id=" + dayId +
+                ", day=" + day +
+                '}';
     }
 }

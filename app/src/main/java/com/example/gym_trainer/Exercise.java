@@ -1,28 +1,32 @@
 package com.example.gym_trainer;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity
 public class Exercise {
 
-  public int id;
+ @PrimaryKey
+ public int Exid;
    private String name;
    private String type;
    private int flag;
    private int col;
 
     public Exercise(int id, String name, String type, int flag, int col) {
-        this.id = id;
+        this.Exid = id;
         this.name = name;
         this.type = type;
         this.flag = flag;
         this.col = col;
     }
 
-    public long getId() {
-        return id;
+    public long getExid() {
+        return Exid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setExid(int exid) {
+        this.Exid = exid;
     }
 
     public String getName() {

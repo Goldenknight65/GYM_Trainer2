@@ -10,17 +10,11 @@ import java.util.List;
 @Dao
 public interface DbInerface {
     @Query("SELECT day FROM Day")
-    List<Day> getAllDay();
-
-    @Query("Select exercise from day")
-    List<Exercise> getExercises();
+    int [] getAllDay();
 
     @Update
     public void updateFlag(Day... day);
-    
+
     @Insert
     public void insertDay(Day... day);
-
-
-
 }
